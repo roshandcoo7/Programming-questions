@@ -2,14 +2,14 @@ A = "BATD"
 B = "ABACD"
 
 # !Recursion
-# def LCS(A,B,m,n):
-#     if n == 0 or m == 0:
-#         result = 0
-#     elif A[m-1] == B[n-1]:
-#         result = 1 + LCS(A,B,m-1,n-1)
-#     else:
-#         result = max(LCS(A,B,m,n-1),LCS(A,B,m-1,n))
-#     return result
+def LCS(A,B,m,n):
+    if n == 0 or m == 0:
+        result = 0
+    elif A[m-1] == B[n-1]:
+        result = 1 + LCS(A,B,m-1,n-1)
+    else:
+        result = max(LCS(A,B,m,n-1),LCS(A,B,m-1,n))
+    return result
 
 # !DP
 def LCS(text1,text2):
