@@ -3,7 +3,8 @@ a = [1,2,3]
 ans = []
 def permutation(arr,size,n):
     if size == 1:
-        ans.append(arr)
+        ans.append(arr[:])
+        return
     for i in range(size):
         permutation(arr,size-1,n)
         if size & 1:
